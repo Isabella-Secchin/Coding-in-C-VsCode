@@ -17,6 +17,7 @@ int main(void){
     for(i = 15; i > 0; i--){
         printf("\nEntre com a letra para adivinhar a palavra: \n");
         scanf(" %c", &adv[j]);
+        adv[j] = tolower(adv[j]);
         for(k = 0; k < strlen(ps); k++){
             if(adv[j] == ps[k]){
                 ps2[k] = adv[j];
