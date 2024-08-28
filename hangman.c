@@ -4,7 +4,7 @@
 #include <string.h>
 int main(void){
     int i, j = 0, k, aux = 0, acertou;
-    char ps[15], adv[20] = {0};
+    char ps[25], adv[30] = {0};
     printf("Entre com a palavra secreta: \n");
     fgets(ps, sizeof(ps), stdin);
     ps[strcspn(ps, "\n")] = '\0';
