@@ -13,6 +13,7 @@ int main(void){
         for(j = 0; j < 640; j++){
             printf("%u ", img[i][j]);
         }
+        printf("\n");
     }
 }
 void geraImgGreyFull(unsigned char img[480][640], unsigned char pixel){

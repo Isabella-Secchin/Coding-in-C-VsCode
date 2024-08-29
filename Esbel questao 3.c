@@ -11,6 +11,7 @@ int main(void){
         for(j = 0; j < 640; j++){
             printf("%u ", img[i][j]);
         }
+        printf("\n");
     }
 }
 
