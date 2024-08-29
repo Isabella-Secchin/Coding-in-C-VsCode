@@ -1,23 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void geraImgGreyB(unsigned char img[640][480]);
+void geraImgGreyB(unsigned char img[480][640]);
 
 int main(void){
     int i, j;
-    unsigned char img[640][480];
+    unsigned char img[480][640];
     geraImgGreyB(img);
-    for(i = 0; i < 640; i++){
-        for(j = 0; j < 480; j++){
-            printf("%d e %d : %u \n", i+1, j+1, img[i][j]);
+    for(i = 0; i < 480; i++){
+        for(j = 0; j < 640; j++){
+            printf("%u ", img[i][j]);
         }
     }
 }
 
-void geraImgGreyB(unsigned char img[640][480]){
+void geraImgGreyB(unsigned char img[480][640]){
     int i, j;
-    for(i = 0; i < 640; i++){
-        for(j = 0; j < 480; j++){
+    for(i = 0; i < 480; i++){
+        for(j = 0; j < 640; j++){
             img[i][j] = 0;
         }
     }
