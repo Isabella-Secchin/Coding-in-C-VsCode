@@ -9,7 +9,7 @@ int main(void){
     unsigned char pixel;
     srand(time(NULL));
     printf("Entre com o tipo para gerar o pixel:\n");
-    scanf("%c", &tipo);
+    scanf("%d", &tipo);
     pixel = geraGreyPixel(tipo);
     printf("%u", pixel);
     return 0;
