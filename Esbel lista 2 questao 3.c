@@ -19,17 +19,13 @@ void geraLinhaR(unsigned char img[480][640],int i, int j){
     if(j < 0){
         return;
     }
-    else{
-        img[i][j] = 0;
-        geraLinhaR(img, i, j - 1);
-    }
+    img[i][j] = 0;
+    geraLinhaR(img, i, j - 1);
 }
 void geraImgGreyB_R(unsigned char img[480][640], int i){
     if(i < 0){
         return;
     }
-    else{
-        geraLinhaR(img, i, 639);
-        geraImgGreyB_R(img, i -1);
-    }
+    geraLinhaR(img, i, 639);
+    geraImgGreyB_R(img, i -1);
 }

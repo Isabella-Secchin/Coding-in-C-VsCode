@@ -21,17 +21,13 @@ void geraLinhaR(unsigned char img[480][640],int i, int j, unsigned char pixel){
     if(j < 0){
         return;
     }
-    else{
-        img[i][j] = pixel;
-        geraLinhaR(img, i, j - 1, pixel);
-    }
+    img[i][j] = pixel;
+    geraLinhaR(img, i, j - 1, pixel);
 }
 void geraImgGreyFull_R(unsigned char img[480][640], int i, unsigned char pixel){
     if(i < 0){
         return;
     }
-    else{
-        geraLinhaR(img, i, 639, pixel);
-        geraImgGreyFull_R(img, i -1, pixel);
-    }
+    geraLinhaR(img, i, 639, pixel);
+    geraImgGreyFull_R(img, i -1, pixel);
 }

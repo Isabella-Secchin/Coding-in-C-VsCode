@@ -45,8 +45,6 @@ void geraLinhaR(unsigned char lin[640], int n, int tipo){
     if(n < 0){
         return;
     }
-    else{
-        lin[n] = geraGreyPixel(tipo);
-        geraLinhaR(lin, n - 1, tipo);
-    }
+    lin[n] = geraGreyPixel(tipo);
+    geraLinhaR(lin, n - 1, tipo);
 }
