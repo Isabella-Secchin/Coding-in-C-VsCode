@@ -26,18 +26,18 @@ unsigned char geraGreyPixel(int tipo){
             return rand() % 128;
         }
         else{
-            return 128 + rand() % (255 - 128 + 1);
+            return 128 + rand() % (256 - 128);
         }
     }
-    if(tipo > 0){
+    else if(tipo > 0){
         if(i<=75){
-            return 128 + rand() % (255 - 128 + 1);
+            return 128 + rand() % (256 - 128);
         }
         else{
             return rand() % 128;
         }
     }
-    if(tipo == 0){
+    else if(tipo == 0){
         return rand() % 256;
     }
 }
