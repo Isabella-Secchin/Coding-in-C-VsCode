@@ -3,15 +3,19 @@
 #include <time.h>
 
 unsigned char geraGreyPixel(int);
+void geraLinhaR(unsigned char[], int, int);
 
 int main(void){
-    int tipo;
-    unsigned char pixel;
+    int tipo, n = 639;
+    unsigned char lin[640];
     srand(time(NULL));
-    printf("Entre com o tipo para gerar o pixel:\n");
+    printf("Entre com o tipo para gerar os pixels:\n");
     scanf("%d", &tipo);
-    pixel = geraGreyPixel(tipo);
-    printf("%u", pixel);
+    geraLinhaR(lin, n, tipo);
+    printf("Como esta o array: \n");
+    for(n = 0; n < 640; n++){
+        printf("Posicao %d: %u\n", n + 1, lin[n]);
+    }
     return 0;
 }
 
@@ -35,5 +39,14 @@ unsigned char geraGreyPixel(int tipo){
     }
     if(tipo == 0){
         return rand() % 256;
+    }
+}
+void geraLinhaR(unsigned char lin[640], int n, int tipo){
+    if(n < 0){
+        return;
+    }
+    else{
+        lin[n] = geraGreyPixel(tipo);
+        geraLinhaR(lin, n - 1, tipo);
     }
 }
