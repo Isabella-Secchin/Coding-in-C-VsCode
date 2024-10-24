@@ -21,7 +21,7 @@ typedef struct{
 
 //Anteriores 
 
-unsigned char geraGreyPixel(int);
+unsigned char geraGreyPixel(int tipo);
 
 // Questao 1
 

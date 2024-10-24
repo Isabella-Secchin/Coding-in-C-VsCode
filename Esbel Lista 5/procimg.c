@@ -142,9 +142,9 @@ int geraImgRGBB(imgRGB _img){
         return 0;
     }
     for(int i = 0;  i < _img.nLin * _img.nCol; i++){
-        _img.R = 0;
-        _img.G = 0;
-        _img.B = 0;
+        _img.R[i] = 0;
+        _img.G[i] = 0;
+        _img.B[i] = 0;
     }
     return 1;
 }
@@ -172,9 +172,9 @@ int geraImgRGBW(imgRGB _img){
         return 0;
     }
     for(int i = 0;  i < _img.nLin * _img.nCol; i++){
-        _img.R = 255;
-        _img.G = 255;
-        _img.B = 255;
+        _img.R[i] = 255;
+        _img.G[i] = 255;
+        _img.B[i] = 255;
     }
     return 1;
 }
@@ -202,9 +202,9 @@ int geraImgRGB(imgRGB _img, int tipo){
         return 0;
     }
     for(int i = 0;  i < _img.nLin * _img.nCol; i++){
-        _img.R = geraGreyPixel(tipo);
-        _img.G = geraGreyPixel(tipo);
-        _img.B = geraGreyPixel(tipo);
+        _img.R[i] = geraGreyPixel(tipo);
+        _img.G[i] = geraGreyPixel(tipo);
+        _img.B[i] = geraGreyPixel(tipo);
     }
     return 1;
 }
