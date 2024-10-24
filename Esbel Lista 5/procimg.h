@@ -70,8 +70,8 @@ int pixelGrayMin(imgGray _img);
 
 //Questao 12
 
-tRGB pixelRGBMax(imgRGB img);
-tRGB pixelRGBMin(imgRGB img);
+tRGB pixelRGBMax(imgRGB _img);
+tRGB pixelRGBMin(imgRGB _img);
 
 //Questao 13
 
@@ -82,3 +82,19 @@ int* somaPorColunasGray(imgGray _img);
 
 tRGB* somaPorLinhasRGB(imgRGB _img);
 tRGB* somaPorColunasRGB(imgRGB _img);
+
+//Questao 15
+
+int somaTotalGray(imgGray _img);
+
+//Questao 16
+
+tRGB somaTotalRGB(imgRGB _img);
+
+//Questao 17
+
+int quantosPixelsGrayNaInt(imgGray _img, uchar inten);
+
+//Questao 18
+
+int quantosPixelsRGBNaInt(imgRGB _img, tRGB inten);

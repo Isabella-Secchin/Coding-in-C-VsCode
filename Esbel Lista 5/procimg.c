@@ -313,5 +313,48 @@ tRGB* somaPorColunasRGB(imgRGB _img){
     return soma;
 }
 
+//Questao 15
 
+int somaTotalGray(imgGray _img){
+    int soma = 0;
+    for(int i = 0; i < _img.nLin * _img.nCol; i++){
+        soma += _img.pixels[i];
+    }
+    return soma;
+}
 
+//Questao 16
+
+tRGB somaTotalRGB(imgRGB _img){
+    tRGB soma = {0, 0, 0};
+    for(int i = 0; i < _img.nLin * _img.nCol; i++){
+        soma.R += _img.R[i];
+        soma.G += _img.G[i];
+        soma.B += _img.B[i];
+    }
+    return soma;
+}
+
+//Questao 17
+
+int quantosPixelsGrayNaInt(imgGray _img, uchar inten){
+    int quantpix = 0;
+    for(int i = 0; i < _img.nLin * _img.nCol; i++){
+        if(inten == _img.pixels[i]){
+            quantpix += 1;
+        }
+    }
+    return quantpix;
+}
+
+//Questao 18
+
+int quantosPixelsRGBNaInt(imgRGB _img, tRGB inten){
+    int quantpix = 0;
+    for(int i = 0; i < _img.nLin * _img.nCol; i++){
+        if(inten.R == _img.R[i] && inten.G == _img.G[i] && inten.B == _img.B[i]){
+            quantpix += 1;
+        }
+    }
+    return quantpix;
+}
