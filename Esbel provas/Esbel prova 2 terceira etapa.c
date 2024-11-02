@@ -132,7 +132,7 @@ int main(void){
     //Vou utilizar a imagem feita pela questao anterior para realizar o teste
     imgGray ImagemCinza = convert(imagem);
     printf("Imagem cinza:\n");
-     //i inicializado como 1 para o print da matriz ficar no formato certo na hora de aparecer no terminal
+    //i inicializado como 1 para o print da matriz ficar no formato certo na hora de aparecer no terminal
     //Por isso utilizei i - 1 na hora de acessar os valores
     for(i = 1; i < nLin * nCol + 1; i++){
         printf("%u\t", ImagemCinza._img[i - 1]);
