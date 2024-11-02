@@ -87,7 +87,7 @@ imgGray convert(imgRGB img){
     return imagem;
 }
 
-//Main para testar as funções
+//Main para testar as funcoes
 
 int main(void){
     printf("\n\nQuestao 3:\n\n");
