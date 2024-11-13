@@ -33,8 +33,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/bella/OneDrive/Desktop/CiC/Coding in C VsCode/Esbel provas",
-      "program": "c:/Users/bella/OneDrive/Desktop/CiC/Coding in C VsCode/Esbel provas/build/Debug/outDebug",
+      "cwd": "c:/Users/bella/OneDrive/Desktop/CiC/Coding in C VsCode/Quiz economia",
+      "program": "c:/Users/bella/OneDrive/Desktop/CiC/Coding in C VsCode/Quiz economia/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
