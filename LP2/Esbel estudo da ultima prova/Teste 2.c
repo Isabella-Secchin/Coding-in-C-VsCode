@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 
-// Questao 1
+// Questao 1(lin e col não foram passados como ponteiros para a função, necessário
+//           utilizar &, mas não se utiliza * para acessar valor de lin e col!)
 
 int guardaImagem(unsigned char** img, int lin, int col, char* fileName){
     FILE *fp = fopen(fileName, "wb");
@@ -26,7 +27,9 @@ int guardaImagem(unsigned char** img, int lin, int col, char* fileName){
     return 0;
 }
 
-// Questao 2
+// Questao 2 (lin e col passados como ponteiros para a função, não se usa o &
+//            e é necessário utilizar * quando quiser acessar a quantidade de 
+//            linhas e colunas!)
 
 unsigned char** carregaImagem(int* col, int* lin, char* fileName){
     FILE *fp = fopen(fileName, "rb");
