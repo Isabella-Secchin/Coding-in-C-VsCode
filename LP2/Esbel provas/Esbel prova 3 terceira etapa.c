@@ -68,6 +68,7 @@ int lerChar(char* fileName){
     while(fread(&aux, sizeof(char), 1, fp) == 1){
         cont++;
         if(cont > 1200){
+            fclose(fp);
             return 0;
         }
     }
