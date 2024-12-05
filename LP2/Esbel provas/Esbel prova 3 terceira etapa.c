@@ -127,7 +127,7 @@ int main(void){
         return -1;
     }
     srand(time(NULL));
-    j = rand()% 1200;
+    j = rand() % 2000;
     int tipo;
     char cAux;
     for(i = 0; i < j; i++){
@@ -145,14 +145,23 @@ int main(void){
     }
     fclose(fp2);
     printf("QUESTAO 3:\n\n");
-    printf("Quantidade de caracteres que deve ser retornada pela funcao: %d\n\n", j);
-
+    if(j <= 1200){
+        printf("Quantidade de caracteres que deve ser retornada pela funcao: %d\n\n", j);
+    }
+    else{
+        printf("Quantidade de caracteres que deve ser retornada pela funcao: 0\n\n");
+    }
     //Uso da função da questão 3
 
     int cont2 = lerChar(arquivoAux);
     printf("Quantidade de caracteres no arquivo txt de acordo com a funcao da questao 3: %d\n\n", cont2);
     if(j == cont2){
         printf("%d == %d Funcao da questao 3 funcionou!\n\n", j, cont2);
+    }
+    else{
+        if(cont2 == 0){
+            printf("Funcao da questao 3 funcionou, quantidade de caracteres maior que 1200, funcao retornou: %d!\n\n", cont2);
+        }
     }
 
     //Liberação das matrizes alocadas
