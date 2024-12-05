@@ -153,5 +153,16 @@ int main(void){
     if(j == cont2){
         printf("%d == %d Funcao da questao 3 funcionou!\n\n", j, cont2);
     }
+
+    //Liberação das matrizes alocadas
+
+    for(i = 0; i < lin; i++){
+        free(imgAux[i]);
+    }
+    free(imgAux);
+    for(i = 0; i < lin; i++){
+        free(imgAux2[i]);
+    }
+    free(imgAux2);
     return 0;
 }
