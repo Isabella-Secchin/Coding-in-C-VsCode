@@ -74,7 +74,7 @@ int comparar(const void* a, const void* b){
     if (data1[2] != data2[2]){
         return data1[2] - data2[2];  
     } 
-    if (data1[1] != data2[1]){
+    if (data1[1] != data2[1]) {
         return data1[1] - data2[1];  
     }
     return data1[0] - data2[0];  
@@ -83,7 +83,7 @@ int comparar(const void* a, const void* b){
 int particionar(int** data, int baixo, int alto){
     int* pivote = data[alto];  
     int i = baixo - 1; 
-    for (int j = baixo; j < alto; j++){
+    for (int j = baixo; j < alto; j++) {
         if (comparar(&data[j], &pivote) < 0){
             i++;
             troca(&data[i][0], &data[j][0]);  
@@ -97,10 +97,10 @@ int particionar(int** data, int baixo, int alto){
     return i + 1;  
 }
 
-void quickSort(int** data, int low, int high){
-    if (low < high) {
-        int pivôIndex = particionar(data, low, high); 
-        quickSort(data, low, pivôIndex - 1);  
-        quickSort(data, pivôIndex + 1, high); 
+void quickSort(int** data, int baixo, int alto){
+    if (baixo < alto) {
+        int pivôIndex = particionar(data, baixo, alto);
+        quickSort(data, baixo, pivôIndex - 1);
+        quickSort(data, pivôIndex + 1, alto);
     }
 }
