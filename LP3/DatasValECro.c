@@ -99,8 +99,8 @@ int particionar(int** data, int baixo, int alto){
 
 void quickSort(int** data, int baixo, int alto){
     if (baixo < alto) {
-        int pivôIndex = particionar(data, baixo, alto);
-        quickSort(data, baixo, pivôIndex - 1);
-        quickSort(data, pivôIndex + 1, alto);
+        int indice = particionar(data, baixo, alto);
+        quickSort(data, baixo, indice - 1);
+        quickSort(data, indice + 1, alto);
     }
 }
