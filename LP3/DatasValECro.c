@@ -24,7 +24,7 @@ int main(void){
         }
     }
     for (i = 0; i < quant; i++){
-        printf("Entre com a data %d: (no formato dd/mm/aa)\n", i + 1);
+        printf("Entre com a data %d: (no formato dd/mm/aaaa)\n", i + 1);
         scanf("%d/%d/%d", &data[i][0], &data[i][1], &data[i][2]);
         if (data[i][1] < 1 || data[i][1] > 12){
             printf("Mes invalido!\n");
